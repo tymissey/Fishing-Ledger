@@ -1491,7 +1491,7 @@
 } 
 
 -(void)setWeather{
-    self->APIKey = @"0d92b446f16989f3a2c8173bb8324a24";
+    self->APIKey = @""; //get your own API key from Forecast.io
     self->weatherLocation = mapView.userLocation.location;
     self->weatherUpdateTime = [NSDate date];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
