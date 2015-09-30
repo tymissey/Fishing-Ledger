@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="10K549" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Fish" representedClassName="Fish" syncable="YES">
+        <attribute name="fishBait" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fishDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fishID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fishIdentifyer" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fishLat" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fishLon" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fishMoon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fishPressure" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fishTemperature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fishType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fishWeather" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fishWindDirection" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fishWindMagnitude" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Fish" positionX="160" positionY="192" width="128" height="135"/>
+    </elements>
+</model>

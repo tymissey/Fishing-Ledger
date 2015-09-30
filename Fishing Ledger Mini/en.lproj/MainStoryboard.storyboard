@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" promptedForUpgradeToXcode5="NO" initialViewController="3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="11">
+            <objects>
+                <navigationController id="3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" id="4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nWX-fO-VW0" kind="relationship" relationship="rootViewController" id="nUh-mA-hYt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="64"/>
+        </scene>
+        <!--Lake View Controller-->
+        <scene sceneID="X9j-E1-kch">
+            <objects>
+                <viewController id="nWX-fO-VW0" customClass="LakeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DdA-Nt-rvv">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="TBM-ff-76Z">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <pickerView alpha="0.89999997615814209" tag="1" contentMode="scaleToFill" id="jEk-6K-d6V">
+                                <rect key="frame" x="0.0" y="9" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.015930268913507462" green="0.92934781312942505" blue="0.056912172585725784" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nWX-fO-VW0" id="Pvl-7r-LgY"/>
+                                    <outlet property="delegate" destination="nWX-fO-VW0" id="WVw-0D-Lg3"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="tvN-QR-leB">
+                                <rect key="frame" x="83" y="233" width="217" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.26909828186035156" green="0.54378867149353027" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="I5T-EK-qHm">
+                                <rect key="frame" x="19" y="272" width="74" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="0.20690731704235077" blue="0.016986191272735596" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="nWX-fO-VW0" eventType="touchUpInside" id="yqS-m3-iMp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Mg-35-PbW">
+                                <rect key="frame" x="101" y="272" width="199" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="0.26909828186035156" green="0.54378867149353027" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addBtnAction:" destination="nWX-fO-VW0" eventType="touchUpInside" id="4sD-tK-Mji"/>
+                                </connections>
+                            </button>
+                            <pickerView alpha="0.89999997615814209" tag="2" contentMode="scaleToFill" id="fXF-Fk-YXO">
+                                <rect key="frame" x="0.0" y="48" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.342464669" blue="0.22130660590000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nWX-fO-VW0" id="Qqa-Oe-JwI"/>
+                                    <outlet property="delegate" destination="nWX-fO-VW0" id="jI9-Uk-IFW"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView alpha="0.89999997615814209" tag="4" contentMode="scaleToFill" id="4Fx-WB-MpD">
+                                <rect key="frame" x="0.0" y="48" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71769045074167126" green="0.33475682908105409" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nWX-fO-VW0" id="9b3-0u-fhB"/>
+                                    <outlet property="delegate" destination="nWX-fO-VW0" id="XDc-d6-up0"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView alpha="0.89999997615814209" tag="5" contentMode="scaleToFill" id="mie-7j-heb">
+                                <rect key="frame" x="0.0" y="48" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.49202269720000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nWX-fO-VW0" id="ha6-vw-gmR"/>
+                                    <outlet property="delegate" destination="nWX-fO-VW0" id="vHc-IF-Ga3"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bait/Lure:" lineBreakMode="tailTruncation" minimumFontSize="8" id="kXV-g0-ap4">
+                                <rect key="frame" x="20" y="241" width="61" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="8" id="8MC-Uj-ll5">
+                                <rect key="frame" x="14" y="317" width="286" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UnH-Ig-k9h">
+                                <rect key="frame" x="100" y="350" width="121" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <state key="normal" title="Powered by Forecast">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forecastButtonLink:" destination="nWX-fO-VW0" eventType="touchUpInside" id="Nsa-WH-v1R"/>
+                                </connections>
+                            </button>
+                            <pickerView alpha="0.89999997615814209" tag="3" contentMode="scaleToFill" id="nzK-nz-FW3">
+                                <rect key="frame" x="0.0" y="48" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.26909828190000001" green="0.54378867149999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="nWX-fO-VW0" id="MhC-Xo-oQr"/>
+                                    <outlet property="delegate" destination="nWX-fO-VW0" id="5wh-Tf-46y"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gye-ii-vh2">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="oRe-jg-JMq">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="ZtS-EY-wtp">
+                                <rect key="frame" x="5" y="7" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectMap:" destination="nWX-fO-VW0" eventType="valueChanged" id="PSu-l2-V3J"/>
+                                </connections>
+                            </segmentedControl>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="addfishdeselected.png" id="Ign-40-cRQ">
+                            <connections>
+                                <action selector="addFishControls:" destination="nWX-fO-VW0" id="lkr-nU-pdD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addBtn" destination="Ign-40-cRQ" id="tn5-MK-54b"/>
+                        <outlet property="baitBox" destination="tvN-QR-leB" id="478-fQ-Khc"/>
+                        <outlet property="cancelBtn" destination="I5T-EK-qHm" id="K5E-dS-n8W"/>
+                        <outlet property="doneBtn" destination="9Mg-35-PbW" id="JdG-4x-rQJ"/>
+                        <outlet property="filterPicker" destination="fXF-Fk-YXO" id="h1W-Iy-5d7"/>
+                        <outlet property="filterPickerA" destination="mie-7j-heb" id="RW7-gN-G66"/>
+                        <outlet property="filterPickerB" destination="nzK-nz-FW3" id="Qyq-8g-l63"/>
+                        <outlet property="filterPickerC" destination="4Fx-WB-MpD" id="WJt-kU-lyt"/>
+                        <outlet property="fishPicker" destination="jEk-6K-d6V" id="Nrk-0F-Ky2"/>
+                        <outlet property="forecastBtn" destination="UnH-Ig-k9h" id="BSS-is-iWd"/>
+                        <outlet property="infolabel" destination="kXV-g0-ap4" id="bbA-wX-3Vk"/>
+                        <outlet property="infolabel2" destination="8MC-Uj-ll5" id="i9j-Yv-7wT"/>
+                        <outlet property="mapSelect" destination="ZtS-EY-wtp" id="QLq-yZ-29s"/>
+                        <outlet property="mapView" destination="TBM-ff-76Z" id="TlV-M1-cuD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvo-zW-xWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408" y="64"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addfishdeselected.png" width="22" height="22"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
